@@ -1,0 +1,190 @@
+[
+	{
+		"name": "Civic Tree",
+		"era": "Ancient era",
+		"uniques": ["Each city founded increases culture cost of policies [100]% less than normal", "Free Social Policy"],
+		"policies": [
+			// Row 1
+			{
+				"name": "Craftsmanship",
+				"uniques":["[+15]% Production when constructing [Worker] units [in all cities]",
+					"[-25]% Culture cost of adopting new Policies"],
+				"requires": ["Code of Laws"],
+				"row": 1,
+				"column": 3
+			},
+			{
+				"name": "Military Tradition", 
+				"uniques": ["[+30]% Production when constructing [Heavy Chariot] units [in all cities]", "[+30]% Production when constructing [Horseman] units [in all cities]",
+					"[+30]% Production when constructing [War-Cart] units [in all cities]", "[+30]% Production when constructing [Saka Horse Archer] units [in all cities]",
+					"[+30]% Production when constructing [Varu] units [in all cities]", "[+30]% Production when constructing [Hetairoi] units [in all cities]",
+					"[-25]% Culture cost of adopting new Policies"],
+				"requires": ["Craftsmanship"],
+				"row": 1,
+				"column": 5
+			},
+			{
+				"name": "Games and Recreation",
+				"uniques": ["Districts enabled: Entertainment Complex\n Wonders enabled: Colosseum",
+					"[-10]% Culture cost of adopting new Policies"],
+				"requires": ["State Workforce"],
+				"row": 1,
+				"column": 9
+			},
+			{
+				"name": "Military Training",
+				"uniques": ["Wonders enabled: Statue of Zeus"
+					"[+30]% Production when constructing [Encampment] buildings [in all cities]", 
+					"[+30]% Production when constructing [Harbor] buildings [in all cities]",
+					"[+30]% Production when constructing [Barracks] buildings [in all cities]",
+					"[+30]% Production when constructing [Stable] buildings [in all cities]",
+					"[+30]% Production when constructing [Lighthouse] buildings [in all cities]"],
+				"requires": ["Games and Recreation","Military Tradition"],
+				"row": 1,
+				"column": 11
+			},
+			{
+				"name": "Naval Tradition",
+				"uniques": ["[+20]% [Gold] from every [Harbor]"],
+				"requires": ["Defensive Tactics"],
+				"row": 1,
+				"column": 15
+			},
+			{
+				"name": "Mercenaries",
+				"uniques": ["Units enabled: Winged Hussar, Jong",
+					"[-33]% Gold cost of upgrading <for [Military] units>"],
+				"requires": ["Feudalism","Military Training"],
+				"row": 1,
+				"column": 17
+			},
+			
+			// Row 2
+			{
+				"name": "Code of Laws",
+				"uniques": ["[+1 Culture, +1 Gold] in capital"],
+				"row": 2,
+				"column": 1
+			},
+			{
+				"name": "State Workforce",
+				"uniques": ["[+10]% Production when constructing [Wonders] buildings [in all cities]", "[-25]% Culture cost of adopting new Policies"],
+				"requires": ["Craftsmanship"],
+				"row": 2,
+				"column": 5
+			},
+			{
+				"name": "Early Empire",
+				"uniques": ["[+25]% Production when constructing [Settler] units [in all cities]", "[-10]% Culture cost of adopting new Policies"],
+				"requires": ["Craftsmanship"],
+				"row": 2,
+				"column": 7
+			},
+			{
+				"name": "Political Philosophy",
+				"uniques": ["Wonders enabled: Apadana",	"[-50]% City-State Influence degradation"],
+				"requires": ["State Workforce","Early Empire"],
+				"row": 2,
+				"column": 9
+			},
+			{
+				"name": "Defensive Tactics",
+				"uniques": ["Wonders enabled: Mausoleum at Halicarnassus", "[+50]% Production when constructing [Ancient Walls] buildings [in all cities]",
+					"[+50]% Production when constructing [Medieval Walls] buildings [in all cities]"], // Renaissance wall
+				"requires": ["Games and Recreation","Political Philosophy"],
+				"row": 2,
+				"column": 11
+			},
+			{
+				"name": "Recorded History",
+				"uniques": ["Wonders enabled: Great Library", "[+10]% [Science] from every [Campus]"],
+				"requires": ["Drama and Poetry","Political Philosophy"],
+				"row": 2,
+				"column": 13
+			},
+			{
+				"name": "Feudalism",
+				"uniques": ["[+20]% Production when constructing [Pike and Shot] units [in all cities]", 
+					"[+20]% Production when constructing [Musketman] units [in all cities]",
+					"[+20]% Production when constructing [Crossbowman] units [in all cities]",
+					"[+20]% Production when constructing [Crouching Tiger] units [in all cities]",
+					"[+20]% Production when constructing [Keshig] units [in all cities]",
+					"[+20]% Production when constructing [Hwacha] units [in all cities]",
+					"[+1 Food] from every [Farm]", "[+1 Food] from every [Plantation]", "[+1 Food] from every [Stepwell]"],
+				"requires": ["Defensive Tactics"],
+				"row": 2,
+				"column": 15
+			},
+			{
+				"name": "Medieval Faires",
+				"uniques": ["Units enabled: Barbary Corsair", "Wonders enabled: Angkor Wat",
+					"[+5]% [Culture] from every [Theater Square]"],
+				"requires": ["Feudalism"],
+				"row": 2,
+				"column": 17
+			},
+			{
+				"name": "Guilds",
+				"uniques": ["Districts enabled: Mbanza", "Wonders enabled: Chichen Itza",
+					"[+15]% [Production] from every [Industrial Zone]", "[+1 Production] from every [Kurgan]"],
+				"requires": ["Feudalism","Civil Service"],
+				"row": 2,
+				"column": 19
+			},
+			
+			// Row 3
+			{
+				"name": "Foreign Trade",
+				"uniques": ["Units enabled: Trader", "[+2 Gold] from each Trade Route", "[-25]% Culture cost of adopting new Policies"],
+				"requires": ["Code of Laws"],
+				"row": 3,
+				"column": 3
+			},
+			{
+				"name": "Mysticism",
+				"uniques": ["Wonders enabled: Oracle", "[Great Scientist] is earned [10]% faster", "[Great Artist] is earned [10]% faster",
+					"[-20]% Culture cost of adopting new Policies"],
+				"requires": ["Foreign Trade"],
+				"row": 3,
+				"column": 7
+			},
+			{
+				"name": "Drama and Poetry",
+				"uniques": ["Districts enabled: Theater Square, Acropolis.\n Buildings enabled: Amphitheater, Marae",
+					"[Great Artist] is earned [25]% faster", "[-10]% Culture cost of adopting new Policies"],
+				"requires": ["Early Empire"],
+				"row": 3,
+				"column": 9
+			},
+			{
+				"name": "Theology",
+				"uniques": ["Buildings enabled: Temple, Prasat, Stave Church, Madrasa",
+					"[+10]% [Culture] from every [Theater Square]"],
+				"requires": ["Drama and Poetry","Mysticism"],
+				"row": 3,
+				"column": 13
+			},
+			{
+				"name": "Civil Service",
+				"uniques": ["[+1 Happiness] in all cities with a garrison", "[+1 Production] from every [Mekewap]"],
+				"requires": ["Defensive Tactics","Recorded History"],
+				"row": 3,
+				"column": 15
+			},
+			{
+				"name": "Divine Right",
+				"uniques": ["Wonders enabled: Kotoku-in",
+					"[+20]% Production when constructing [Cavalry] units [in all cities]", "[+20]% Production when constructing [Cuirassier] units [in all cities]",
+					"[+20]% Production when constructing [Rough Rider] units [in all cities]"],
+				"requires": ["Civil Service","Theology"],
+				"row": 3,
+				"column": 19
+			},
+			
+			// Finisher
+			{
+				"name": "Civic Tree Complete"
+			},
+		]
+	}
+]

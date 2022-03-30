@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Ancient era",
+        "researchAgreementCost": 150,
+        "startingSettlerCount": 1, // These values should not include the values given in Difficulties.json
+        "startingWorkerCount": 0,
+        "startingMilitaryUnitCount": 1,
+        "startingMilitaryUnit": "Warrior",
+		"startingGold": 10,
+        "settlerPopulation": 1,
+        "baseUnitBuyCost": 200,
+		"embarkDefense": 3,
+        "startPercent": 0,
+        "friendBonus": {
+            "Cultured": ["Provides [+3 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn"],
+            "Mercantile": ["Provides [+4 Gold] [in capital] per turn"],
+            "Religious": ["Provides [+3 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns"]
+        },
+        "allyBonus": {
+            "Cultured": ["Provides [+6 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn", "Provides [+2 Food] [in all coastal cities] per turn"],
+            "Mercantile": ["Provides [+4 Gold] [in capital] per turn", "Provides a unique luxury"],
+            "Religious": ["Provides [+6 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns", "[+2 Production] from every [Barracks]"]
+        },
+        "iconRGB": [255, 87, 35]
+    },
+	{
+        "name": "Classical era",
+        "researchAgreementCost": 150,
+        "startingSettlerCount": 1,
+        "startingWorkerCount": 1,
+        "startingMilitaryUnitCount": 2,
+        "startingMilitaryUnit": "Spearman",
+        "startingGold": 110,
+        "startingCulture": 350,
+        "settlerPopulation": 2,
+        "baseUnitBuyCost": 200,
+        "embarkDefense": 4,
+        "startPercent": 10,
+        "friendBonus": {
+            "Cultured": ["Provides [+3 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn"],
+            "Mercantile": ["Provides [+4 Gold] [in capital] per turn"],
+            "Religious": ["Provides [+3 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns"]
+        },
+        "allyBonus": {
+            "Cultured": ["Provides [+6 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn", "Provides [+2 Food] [in all coastal cities] per turn"],
+            "Mercantile": ["Provides [+4 Gold] [in capital] per turn", "Provides a unique luxury"],
+            "Religious": ["Provides [+6 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns", "[+2 Production] from every [Barracks]"]
+        },
+        "iconRGB": [233, 31, 99]
+    },
+	{
+        "name": "Medieval era",
+        "researchAgreementCost": 250,
+        "startingSettlerCount": 2,
+        "startingWorkerCount": 2,
+        "startingMilitaryUnitCount": 3,
+        "startingMilitaryUnit": "Spearman",
+        "startingGold": 210,
+        "startingCulture": 1250,
+        "settlerPopulation": 3,
+        "settlerBuildings": ["Monument"],
+        "baseUnitBuyCost": 200,
+        "embarkDefense": 6,
+        "startPercent": 25,
+        "friendBonus": {
+			"Cultured": ["Provides [+5 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn"],
+            "Mercantile": ["Provides [+4 Gold] [in capital] per turn"],
+            "Religious": ["Provides [+5 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns"]
+        },
+        "allyBonus": {
+			"Cultured": ["Provides [+10 Culture] [in capital] per turn"],
+            "Maritime": ["Provides [+2 Food] [in capital] per turn", "Provides [+2 Food] [in all coastal cities] per turn"],
+            "Mercantile": ["Provides [+5 Gold] [in capital] per turn", "Provides a unique luxury"],
+            "Religious": ["Provides [+10 Faith] per turn"],
+            "Militaristic": ["Provides military units every ≈[20] turns", "[+2 Production] from every [Barracks]"]
+        },
+        "iconRGB": [157, 39, 176]
+    },
+]

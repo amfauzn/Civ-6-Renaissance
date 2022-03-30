@@ -1,0 +1,263 @@
+[
+	{
+		"columnNumber": 0,
+		"era": "Ancient era",
+		"techCost": 25, 
+		"buildingCost": 60,
+		"techs": [
+			{
+				"name": "Pottery",
+				"row": 5,
+				"quote": "'No man ever wetted clay and left it, as if there would be bricks by chance and fortune.' - Plutarch"
+			},
+			{
+				"name": "Animal Husbandry",
+				"row": 6,
+				"quote": "'I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals.' - Winston S. Churchill"
+			},
+			{
+				"name": "Mining",
+				"row": 8,
+				"quote": "'Who deserves more credit than the wife of a coal miner?' - Merle Travis"
+			}
+			
+		]	
+	},
+	{
+		"columnNumber": 1,
+		"era": "Ancient era",
+		"techCost": 50, 
+		"buildingCost": 75,
+		"wonderCost": 185,
+		"techs": [
+			{
+				"name": "Sailing",
+				"row": 2,
+				"uniques": ["Enables embarkation for land units"],
+				"quote": "'It is not that life ashore is distasteful to me. But life at sea is better.' - Sir Francis Drake"
+			},
+			{
+				"name": "Astrology",
+				"row": 3,
+				"quote": "'A physician without a knowledge of astrology has no right to call himself a physician.' - Hippocrates"
+			},
+			{
+				"name": "Irrigation",
+				"row": 4,
+				"prerequisites": ["Pottery"],
+				"quote": "'The man who has grit enough to bring about the afforestation or the irrigation of a country is not less worthy of honor than its conqueror' - Sir John Thomson"
+			},
+			{
+				"name": "Writing",
+				"row": 5,
+				"uniques": ["Enables conversion of city production to science","Enables Open Borders agreements"],
+				"prerequisites": ["Pottery"],
+				"quote": "'The man who has grit enough to bring about the afforestation or the irrigation of a country is not less worthy of honor than its conqueror' - Paulo Coelho"
+			},
+			{
+				"name": "Archery",
+				"row": 6,
+				"prerequisites": ["Animal Husbandry"],
+				"quote": "'May the forces of evil become confused while your arrow is on its way to the target.' - George Carlin"
+			}	
+		]	
+	},
+	{
+		"columnNumber": 2,
+		"era": "Ancient era",
+		"techCost": 80, 
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
+			{
+				"name": "Masonry",
+				"row": 7,
+				"prerequisites": ["Mining"],
+				"quote": "'Each of us is carving a stone, erecting a column, or cutting a piece of stained glass in the construction of something much bigger than ourselves.' - Adrienne Clarkson"
+			},
+			{
+				"name": "Bronze Working",
+				"row": 8,
+				"prerequisites": ["Mining"],
+				"quote": "'I'm also interested in creating a lasting legacy ... because bronze will last for thousands of years.' - Richard MacDonald"
+			},
+			{
+				"name": "Wheel",
+				"row": 9,
+				"prerequisites": ["Mining"],
+				"quote": "'Don't reinvent the wheel, just realign it.' - Anthony D'Angelo"
+			}
+		]	
+	},
+	{
+		"columnNumber": 3,
+		"era": "Classical era",
+		"techCost": 120, 
+		"buildingCost": 120,
+		"wonderCost": 300,
+		"techs": [
+			{
+				"name": "Celestial Navigation",
+				"row": 3,
+				"prerequisites": ["Sailing","Astrology"],
+				"quote": "'Set your course by the stars, not by the lights of every passing ship' - Omar Bradley"
+			},
+			{
+				"name": "Currency",
+				"row": 5,
+				"prerequisites": ["Writing"],
+				"uniques": ["Enables conversion of city production to gold"],
+				"quote": "'Wealth consists not in having great possessions, but in having few wants.' - Epictetus"
+			},
+			{
+				"name": "Horseback Riding",
+				"row": 6,
+				"prerequisites": ["Archery"],
+				"quote": "'A man on a horse is spiritually as well as physically bigger than a man on foot.' - John Steinfield"
+			},
+			{
+				"name": "Iron Working",
+				"row": 8,
+				"prerequisites": ["Bronze Working"],
+				"quote": "'The Lord made us all out of iron. Then he turns up the heat to forge some of us into steel.' - Marie Osmond"
+			},
+			{
+				"name": "Engineering",
+				"cost": 200,
+				"row": 9,
+				"prerequisites": ["Wheel"],
+				"uniques": ["Roads connect tiles across rivers"],
+				"quote": "'One man's 'magic' is another man's engineering.' - Robert Heinlein"
+			}
+		]	
+	},
+	{
+		"columnNumber": 4,
+		"era": "Classical era",
+		"techCost": 200,
+		"buildingCost": 160,
+		"wonderCost": 400,
+		"techs": [
+			{
+				"name": "Shipbuilding",
+				"row": 2,
+				"prerequisites": ["Sailing"],
+				"quote": "'I cannot imagine any condition which would cause a ship to founder … Modern shipbuilding has gone beyond that.' - Capt. E.J. Smith, RMS Titanic"
+			},
+			{
+				"name": "Mathematics",
+				"row": 4,
+				"prerequisites": ["Currency"],
+				"quote": "'If I were again beginning my studies, I would follow the advice of Plato and start with mathematics.' - Galileo Galilei"
+			},
+			{
+				"name": "Construction",
+				"row": 7,
+				"prerequisites": ["Horseback Riding","Masonry"],
+				"quote": "'The four building blocks of the universe are fire, water, gravel and vinyl.' - Dave Barry"
+			}
+		]
+	},
+	{
+		"columnNumber": 5,
+		"era": "Medieval era",
+		"techCost": 275, 
+		"buildingCost": 200,
+		"wonderCost": 500,
+		"techs": [
+			{
+				"name": "Buttress",
+				"cost": 300,
+				"row": 2,
+				"prerequisites": ["Shipbuilding","Mathematics"],
+				"quote": "'Him that overcometh will I make a pillar in the temple of my God, and he shall go no more out.' - Revelation 3:12"
+			},
+			{
+				"name": "Military Tactics",
+				"row": 3,
+				"prerequisites": ["Mathematics"],
+				"quote": "'Strategy requires thought; tactics require observation.' - Max Euwe"
+			},
+			{
+				"name": "Apprenticeship",
+				"row": 5,
+				"prerequisites": ["Currency","Horseback Riding"],
+				"quote": "'We are all apprentices in a craft where no one ever becomes a master.' - Malory"
+			},
+			{
+				"name": "Stirrups",
+				"cost": 360,
+				"row": 6,
+				"prerequisites": ["Horseback Riding"],
+				"quote": "'Betwixt the stirrup and the ground, Mercy I asked, mercy I found.' - William Camden"
+			},
+			{
+				"name": "Machinery",
+				"row": 9,
+				"prerequisites": ["Iron Working","Engineering"],
+				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
+			}
+		]	
+	},
+	{
+		"columnNumber": 6,
+		"era": "Medieval era",
+		"techCost": 335, 
+		"buildingCost": 250,
+		"wonderCost": 625,
+		"techs": [
+			{
+				"name": "Education",
+				"row": 4,
+				"prerequisites": ["Apprenticeship","Mathematics"],
+				"uniques": ["Enables Research agreements"],
+				"quote": "'The purpose of education is to replace an empty mind with an open one.' - Malcolm Forbes"
+			},
+			{
+				"name": "Military Engineering",
+				"row": 7,
+				"prerequisites": ["Construction"],
+				"quote": "'Blast - Build - Battle' - Motto of the U.S. 16th Engineer Brigade"
+			},
+			{
+				"name": "Castles",
+				"cost": 390,
+				"row": 8,
+				"prerequisites": ["Construction","Iron Working"],
+				"quote": "'If you see a castle under fog, you must walk there to meet the extraordinary dreams.' - Mehmet Murat Ildan"
+			}
+		]	
+	},
+	{
+		"columnNumber": 7,
+		"era": "Medieval era",
+		"techCost": 490, 
+		"buildingCost": 300,
+		"wonderCost": 750,
+		"techs": [
+			{
+				"name": "Cartography",
+				"row": 6,
+				"uniques": ["Enables [Embarked] units to enter ocean tiles"],
+				"prerequisites": ["Education","Military Engineering","Castles"],
+				"quote": "'If your actions inspire others to dream more, learn more, do more and become more, you are a cartographer.' - John Quincy Adams"
+			}
+		]	
+	},
+	{
+		"columnNumber": 8,
+		"era": "Medieval era",
+		"techCost": 2600,
+		"buildingCost": 750,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Future Tech",
+				"row": 6,
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"prerequisites": ["Cartography"],
+				"quote": "'There is nothing like a dream to create the future' - Victor Hugo"
+			}
+		]	
+	}
+]

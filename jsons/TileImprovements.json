@@ -1,0 +1,386 @@
+[
+	{
+		"name": "Farm",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Flood plains","Plains Floodplains"],
+		"food": 1,
+		"turnsToBuild": 7,
+		"shortcutKey": "F"
+	},
+	{
+		"name": "Lumber mill",
+		"terrainsCanBeBuiltOn": ["Forest","Jungle"],
+		"production": 2,
+		"techRequired": "Construction",
+		"shortcutKey": "L"
+	},
+	{
+		"name": "Mine",
+		"resourceTerrainAllow": ["Coast"],
+		"terrainsCanBeBuiltOn": ["Hill"],
+		"production": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Mining",
+		"uniques": ["[+1 Production] <after discovering [Apprenticeship]>"],
+		"shortcutKey": "M"
+	},
+	/*{
+		"name": "Archaeological Dig",
+		"resourceTerrainAllow": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains"],
+	},*/
+	
+	// Resource-specific
+	{
+		"name": "Camp",
+		"resourceTerrainAllow": ["Forest","Marsh"],
+		"gold": 2,
+		"turnsToBuild": 7,
+		"techRequired": "Animal Husbandry",
+		"shortcutKey": "C"
+	},
+	/*{
+		"name": "Oil well",
+		"production": 2,
+		"turnsToBuild": 9,
+		"techRequired": "Refining"
+	},*/
+	{
+		"name": "Pasture",
+		"production": 1,
+		"turnsToBuild": 8,
+		"techRequired": "Animal Husbandry"
+	},
+	{
+		"name": "Plantation",
+		"resourceTerrainAllow": ["Forest","Jungle"],
+		"turnsToBuild": 6,
+		"gold": 2,
+		"techRequired": "Irrigation",
+		"shortcutKey": "P"
+	},
+	{
+		"name": "Quarry",
+		"production": 1,
+		"turnsToBuild": 8,
+		"techRequired": "Mining"
+		"shortcutKey": "Q"
+	},
+	{
+		"name": "Fishing Boats",
+		"resourceTerrainAllow": ["Coast","Lakes","Reef"],
+		//"turnsToBuild": "6",
+		"food": 1,
+		"techRequired": "Sailing",
+		"uniques": ["[+2 Gold] <after discovering [Cartography]>",
+			//"[+1 Production] for each adjacent [Seastead]",, "+1 Production once Colonialism is adopted","[+1 Production] <after discovering [Plastics]>"
+			],
+	},
+
+	// Special improvement
+	{
+		"name": "Trade Route (Domestic)",
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Plains Floodplains","Marsh","Oasis"],
+		"food": 1,
+		"production": 1,
+		"uniques": ["Provides [-1] [Trade Route]","Will not be displayed in Civilopedia"]
+	},
+	{
+		"name": "Trade Route (International)",
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Marsh","Oasis"],
+		"gold": 3,
+		"uniques": ["Provides [-1] [Trade Route]","Will not be displayed in Civilopedia"]
+	},
+	{
+		"name": "Holy site",
+		"faith": 2,
+		"uniques": ["District", "[+2 Faith] for each adjacent [Natural Wonder]", "[+1 Faith] for each adjacent [Mountain]", 
+			"[+1 Faith] <with [2] to [3] neighboring [unimproved] [Forest] tiles>", "[+2 Faith] <with [4] to [5] neighboring [unimproved] [Forest] tiles>", 
+			"[+1 Faith] <with [6] to [6] neighboring [unimproved] [Forest] tiles>"]
+	},
+	{
+		"name": "Lavra",
+		"replaces": "Holy site",
+        "uniqueTo": "Russia",
+		"faith": 4,
+		"uniques": ["District", "[+2 Faith] for each adjacent [Natural Wonder]", "[+1 Faith] for each adjacent [Mountain]", 
+			"[+1 Faith] <with [2] to [3] neighboring [unimproved] [Forest] tiles>", "[+2 Faith] <with [4] to [5] neighboring [unimproved] [Forest] tiles>", 
+			"[+1 Faith] <with [6] to [6] neighboring [unimproved] [Forest] tiles>"]
+	},
+
+	// Military improvement
+	{
+		"name": "Fort",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
+		"turnsToBuild": 6,
+		//"techRequired": "Siege Tactics",
+		"techRequired": "Construction",
+		"uniques": ["Gives a defensive bonus of [25]%", "Can be built outside your borders"],
+		"shortcutKey": "O"
+	},
+
+	// Transportation
+	{
+		"name": "Road",
+		"turnsToBuild": 4,
+		"techRequired": "Wheel",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "R",
+		"civilopediaText": [
+            {"text":"Reduces movement cost to ½ if the other tile also has a Road or Railroad"},
+            {"text":"Requires Engineering to bridge rivers", "link":"Technology/Engineering"}
+        ]
+	},
+	/*{
+		"name": "Railroad",
+		"turnsToBuild": 4,
+		"techRequired": "Steam Power",
+		"uniques": ["Can be built outside your borders"]
+	},*/
+	
+	// Removals
+	{
+		"name": "Remove Forest",
+		"turnsToBuild": 4,
+		"terrainsCanBeBuiltOn": ["Forest"],
+		"techRequired": "Mining",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "X",
+		"civilopediaText": [{"text":"Provides a one-time Production bonus depending on distance to the closest city once finished"}]
+	},
+	{
+		"name": "Remove Jungle",
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Jungle"],
+		"techRequired": "Bronze Working",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "X",
+		"civilopediaText": [{"text":"Provides a one-time Production bonus depending on distance to the closest city once finished"}]
+	},
+	/*{
+		"name": "Remove Fallout",
+		"turnsToBuild": 8,
+		"terrainsCanBeBuiltOn": ["Fallout"],
+		"techRequired": "Nuclear Fission",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "X"
+	},*/
+	{
+		"name": "Remove Marsh",
+		"turnsToBuild": 6,
+		"terrainsCanBeBuiltOn": ["Marsh"],
+		"techRequired": "Irrigation",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "X"
+	},
+
+	// These are unique and have unique in-game checks related to them
+	{
+		"name": "Remove Road",
+		"turnsToBuild": 2,
+		"uniques": ["Can be built outside your borders"]
+	},
+	{
+		"name": "Remove Railroad",
+		"turnsToBuild": 2,
+		"uniques": ["Can be built outside your borders"]
+	},
+	{
+		"name": "Cancel improvement order",
+		"uniques": ["Can be built outside your borders"],
+		"shortcutKey": "."
+	},
+
+	//Civilization unique improvements
+	{
+		"name": "Pa",
+		"terrainsCanBeBuiltOn": ["Hill"],
+		"uniques": ["Gives a defensive bonus of [25]%",	"Can only be built by Toa"]
+	},
+	{
+		"name": "Roman Fort",
+		"uniqueTo": "Rome",
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Plains Floodplains","Marsh","Oasis"],
+		"uniques": ["Gives a defensive bonus of [25]%", "Can only be built by Roman Legion"]
+	},
+	{
+		"name": "Terrace farm",
+		"uniqueTo": "Inca",
+		"food": 1,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Hill"],
+		"uniques": ["[+1 Production] <with [1] to [6] neighboring [Fresh Water] tiles>", "[+1 Food] for each adjacent [Mountain]"]
+		//Aqueducts should give +2 production per Terrace Farm
+	},
+	{
+		"name": "Chemamull",
+		"uniqueTo": "The Mapuche",
+		"culture": 1,
+		"culture": 1,
+		"turnsToBuild":7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Tundra"],
+		"uniques": ["Only available <after adopting [Craftsmanship]>"],
+	},
+	{ 
+		"name": "Rock-Hewn Church",
+		"uniqueTo": "Ethiopia",
+		"faith": 1,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra"],
+		"uniques": ["[+1 Faith] for each adjacent [Mountain]", "[+1 Faith] for each adjacent [Hill]",
+			"Only available <after adopting [Drama and Poetry]>", "[-1 Faith] for each adjacent [Rock-Hewn Church]",
+			//"[+1 Tourism] <after discovering [Flight]>"
+			]
+	},
+	{
+		"name": "Mekewap",
+		"uniqueTo": "The Cree",
+		"production": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Pottery",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
+		"uniques": ["[+1 Food] <with [2] to [6] neighboring [Bonus resource] tiles>", 
+			"[+2 Gold] <with [1] to [1] neighboring [Luxury resource] tiles> <after discovering [Cartography]>",
+			"[+4 Gold] <with [2] to [6] neighboring [Luxury resource] tiles> <after discovering [Cartography]>"
+			//"+1 Food once Conservation is adopted"
+			]
+	},
+	{
+		"name": "Pairidaeza",
+		"uniqueTo": "Persia",
+		"overrideStats": true,
+		"culture": 1,
+		"gold": 2,
+		"happiness": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Pottery",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill"],
+		"uniques": ["[+1 Culture, +1 Gold] for each adjacent [City center]", 
+			//"once Diplomatic Service is adopted"
+			]
+	},
+	{
+		"name": "Sphinx",
+		"uniqueTo": "Egypt",
+		"culture": 2,
+		"faith": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Pottery",
+		"terrainsCanBeBuiltOn": ["Flood plains","Plains Floodplains"],
+		//"uniques": ["+1 Culture once Natural History is adopted"]
+	},
+	{
+		"name": "Stepwell",
+		"uniqueTo": "India",
+		"food": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Pottery",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra"],
+		"uniques": ["[+1 Food] for each adjacent [Farm]", "[+1 Faith] for each adjacent [City center]", 
+			//"+1 Food once Proffesional Sports is adopted"
+			]
+	},
+	{
+		"name": "Kurgan",
+		"uniqueTo": "Scythia",
+		"faith": 1,
+		"gold": 2, // 3, can not on hill
+		"turnsToBuild": 7,
+		"techRequired": "Animal Husbandry",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Tundra","Snow"],
+		"uniques": ["[+1 Faith] for each adjacent [Pasture]",
+			//"+1 Production once Capitalism is adopted"
+			]
+	},
+	{
+		"name": "Great Wall",
+		"uniqueTo": "China",
+		"overrideStats": true,
+		"gold": 2,
+		"turnsToBuild": 7,
+		"techRequired": "Masonry",
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
+		"uniques": ["Gives a defensive bonus of [25]%", "[+2 Culture, +2 Gold] for each adjacent [Great Wall]"]
+	},
+	{
+		"name": "Nubian Pyramid",
+		"uniqueTo": "Nubia",
+		"faith": 1,
+		"food": 1,
+		"science": 1,
+		"gold": 1,
+		"production": 1,
+		"turnsToBuild": 8,
+		"techRequired": "Masonry",
+		"terrainsCanBeBuiltOn": ["Desert","Flood plains"] // adjacent district
+	},
+	{
+		"name": "Kampung",
+		"uniqueTo": "Indonesia",
+		"production": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Shipbuilding",
+		"terrainsCanBeBuiltOn": ["Coast","Lakes"],
+		"uniques": ["Must be next to [Water]", "[+1 Food] for each adjacent [Fishing Boats]",
+			//"+1 Production once Civil Engineering is adopted",
+			//"[+1 Culture] <after discovering [Flight]>"
+			]
+	},
+	{
+		"name": "Ziggurat",
+		"uniqueTo": "Sumeria",
+		"science": 2,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Grassland","Desert","Plains","Tundra"],
+		"uniques": ["[+1 Culture] <with [1] to [1] neighboring [River] tiles>",
+			//"+1 Culture once Natural History is adopted"
+			]
+	},
+	{
+		"name": "Outback Station",
+		"uniqueTo": "Australia",
+		"food": 1,
+		"production": 1,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert"],
+		"uniques": ["Only available <after adopting [Guilds]>", 
+			"[+1 Food] for each adjacent [Pasture]",
+			"[+1 Production] <with [2] to [3] neighboring [Outback Station] tiles>",
+			"[+1 Production] <with [4] to [6] neighboring [Outback Station] tiles>",
+			//"+1 Food once Rapid Deployment is adopted"
+			]
+	},
+	{
+		"name": "Polder",
+		"uniqueTo": "The Netherlands",
+		"food": 1,
+		"production": 1,
+		"turnsToBuild": 7,
+		"techRequired": "Apprenticeship",
+		"terrainsCanBeBuiltOn": ["Coast"],
+		"uniques": ["[+1 Food] for each adjacent [Polder]",
+			//"[+1 Food, +1 Production] <after discovering [Replaceable Parts]>"
+			]
+	},	
+	
+	/*{ 
+		"name": "Ancient ruins", 
+		"uniques": ["Unpillagable", "Provides a random bonus when entered"]
+	},*/
+	{
+		"name": "City ruins", 
+		"uniques": ["Unpillagable"],
+        "civilopediaText": [{"text":"A bleak reminder of the destruction wreaked by War"}]
+	},
+	{ 
+		"name": "City center", 
+		"uniques": ["Unpillagable", "Indestructible"],
+        "civilopediaText": [
+			{"text":"Marks the center of a city"},
+			{"text":"Appearance changes with the technological era of the owning civilization"}
+		]
+	},
+	{ 
+		"name": "Barbarian encampment", 
+		"uniques": ["Unpillagable"],
+        "civilopediaText": [{"text":"Home to uncivilized barbarians, will spawn a hostile unit from time to time"}]
+	}
+]

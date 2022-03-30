@@ -1,0 +1,16 @@
+{
+    "name": "Global uniques", 
+    "uniques": [
+        "[-33]% growth [in all cities] <when between [-5] and [0] Happiness>",
+		"[-66]% growth [in all cities] <when between [-10] and [-5] Happiness>",
+        "Nullifies Growth [in all cities] <when below [-10] Happiness>",
+        "[-33]% [Production] [in all cities] <when below [-10] Happiness>",
+        "[-33]% Strength <for [All] units> <when below [-10] Happiness>",
+        "Cannot build [Settler] units <when below [-10] Happiness>",
+        "[-10]% Culture cost of adopting new Policies",
+		"[-50]% Unhappiness from [Population] [in all cities]",
+		"Gain a free [City Center] [in all cities]",
+		"[+1] Happiness from each type of luxury resource",
+		"[+1 Happiness] [in all cities]"
+    ]
+}
