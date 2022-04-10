@@ -1,0 +1,109 @@
+[
+    {
+        "name": "a stash of gold #1",
+        "notification": "We have receive 40 Gold from the villagers!",
+        "uniques": ["Gain [40] [Gold]"],
+        "color": "#ffeb7f"
+    },
+	{
+        "name": "a stash of gold #2",
+        "notification": "We have receive 75 Gold from the villagers!",
+        "uniques": ["Gain [75] [Gold]", "Only available after [8] turns"],
+        "color": "#ffeb7f"
+    },
+	{
+        "name": "a stash of gold #1",
+        "notification": "We have receive 120 Gold from the villagers!",
+        "uniques": ["Gain [120] [Gold]", "Only available after [15] turns"],
+        "color": "#ffeb7f"
+    },
+	{
+        "name": "shared cultural inspiration #1",
+        "notification": "Villagers share the secrets of their well-ordered society (+25 culture)",
+        "uniques": ["Gain [25] [Culture]"],
+        "color": "#cf8ff7"
+    },
+	{
+        "name": "shared cultural inspiration #2",
+        "notification": "Villagers share the secrets of their well-ordered society (+60 culture)",
+        "uniques": ["Gain [60] [Culture]", "Only available after [10] turns"],
+        "color": "#cf8ff7"
+    },
+	{
+        "name": "an ancient prophecy #1",
+        "notification": "Villagers pray for you (+20 Faith)",
+        "uniques": ["Hidden when religion is disabled", "Gain [20] [Faith]", "Only available after [10] turns"],
+		"color": "#CDDDF4"
+    },
+	{
+        "name": "an ancient prophecy #2",
+        "notification": "Villagers pray for you (+60 Faith)",
+        "uniques": ["Hidden when religion is disabled", "Gain [60] [Faith]", "Only available after [20] turns"],
+		"color": "#CDDDF4"
+    },
+	{
+        "name": "an ancient prophecy #3",
+        "notification": "Villagers pray for you (+100 Faith)",
+        "uniques": ["Hidden when religion is disabled", "Gain [100] [Faith]", "Only available after [30] turns"],
+		"color": "#CDDDF4"
+    },
+	{
+        "name": "discover a lost technology #1",
+        "notification": "Villagers share their technological secrets (+25 Science)",
+        "uniques": ["Gain [25] [Science]"],
+		"color": "#7f7fff"
+    },
+	{
+        "name": "discover a lost technology #2",
+        "notification": "Villagers share their technological secrets (+50 Science)",
+        "uniques": ["Gain [50] [Science]", "Only available after [15] turns"],
+		"color": "#7f7fff"
+    },
+	{
+        "name": "discover a lost technology #3",
+        "notification": "Villagers share their technological secrets: [techName]",
+        "uniques": ["[1] free random researchable Tech(s) from the [Ancient era]", "Only available after [30] turns"],
+		"color": "#7f7fff"
+    },
+	{
+        "name": "survivors (adds population to a city)",
+        "notification": "Survivors decide to join you! Population added to [cityName].",
+        "uniques": ["[+1] population in a random city"], // This can't be easily added to cityFilter, as it is non-deterministic
+		"color": "#81c784"
+    },
+	{
+        "name": "squatters willing to work for you #1",
+        "notification": "A [Worker] from the village comes to work for you!",
+        "uniques": ["Free [Worker] found in the ruins"],
+        "excludedDifficulties": ["Prince", "King", "Emperor", "Immortal", "Deity"]
+    },
+	{
+        "name": "squatters willing to work for you #2",
+        "notification": "A [Trader] from the village join you!",
+        "uniques": ["Free [Trader] found in the ruins"],
+        "excludedDifficulties": ["Prince", "King", "Emperor", "Immortal", "Deity"]
+    },
+	{
+        "name": "your exploring unit receives training",
+        "notification": "Villagers train your men!",
+        "uniques": ["This Unit gains [10] XP"]
+    },
+	/*
+    {
+        "name": "squatters willing to work for you",
+        "notification": "A [Scout] has joined us!",
+        "uniques": ["Free [Scout] found in the ruins"],
+        "excludedDifficulties": ["Prince", "King", "Emperor", "Immortal", "Deity"]
+    },
+    {
+        "name": "squatters wishing to settle under your rule",
+        "notification": "A [Settler] has joined us!",
+        "uniques": ["Free [Settler] found in the ruins"],
+        "excludedDifficulties": ["Warlord","Prince","King","Emperor","Immortal","Deity"]
+    },
+    {
+        "name": "advanced weaponry for your explorer",
+        "notification": "Our unit finds advanced weaponry hidden in the ruins!",
+        "uniques": ["This Unit upgrades for free including special upgrades"]
+    }*/
+]

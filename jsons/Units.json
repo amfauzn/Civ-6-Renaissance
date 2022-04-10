@@ -15,7 +15,7 @@
 		"movement": 2,
 		"strength": 35,
 		"cost": -1,
-		"uniques": ["Unbuildable"],
+		"uniques": ["Unbuildable", "Religious Unit"],
 		"promotions": ["Shadow Strike"],
 		"attackSound": "nonmetalhit"
 	},
@@ -25,7 +25,7 @@
 		"name": "Worker",
 		"unitType": "Civilian",
 		"movement": 2,
-		"uniques": ["Can build [Land] improvements on tiles","May create improvements on water resources"],
+		"uniques": ["Can build [Land] improvements on tiles", "May create improvements on water resources"],
 		"cost": 100
 	},
 	{
@@ -48,8 +48,8 @@
 		"movement": 2,
 		"cost": 40,
 		"requiredResource": "Trade Route",
-		"uniques": ["Can construct [Trade Route (Domestic)]","Can construct [Trade Route (International)]",
-			"Trade Routes on Coastal cities provide +3 yield","Only available <after adopting [Foreign Trade]>"]
+		"uniques": ["Can construct [Trade Route (Domestic)]", "Can construct [Trade Route (International)]",
+			"Trade Routes on Coastal cities provide +3 yield", "Only available <after adopting [Foreign Trade]>"]
 	},
 	{
 		"name": "Scout",
@@ -71,8 +71,10 @@
 		"cost": 40,
 		"obsoleteTech": "Machinery",
 		"upgradesTo": "Skirmisher",
-		"promotions": ["Alpine"],
-		"attackSound": "nonmetalhit"
+		"attackSound": "nonmetalhit",
+		"civilopediaText": [
+			{"text": "Starts with a free promotions"}
+		]
 	},
 	{
 		"name": "Warrior",
@@ -82,31 +84,6 @@
 		"cost": 40,
 		"obsoleteTech": "Iron Working",
 		"upgradesTo": "Swordsman",
-		"attackSound": "nonmetalhit"
-	},
-	{
-		"name": "Eagle Warrior",
-		"uniqueTo": "The Aztec",
-		"replaces": "Warrior",
-		"unitType": "Melee",
-		"movement": 2,
-		"strength": 28,
-		"cost": 65,
-		"obsoleteTech": "Iron Working",
-		"upgradesTo": "Swordsman",
-		"attackSound": "nonmetalhit"
-	},
-	{
-		"name": "Gaesatae",
-		"uniqueTo": "Gaul",
-		"replaces": "Warrior",
-		"unitType": "Melee",
-		"movement": 2,
-		"strength": 20,
-		"cost": 60,
-		"obsoleteTech": "Iron Working",
-		//"upgradesTo": "Musketman",
-		"uniques": ["[+33]% Strength <when attacking>", "[+15]% Strength <vs cities> <when attacking>"],
 		"attackSound": "nonmetalhit"
 	},
 	{
@@ -129,7 +106,6 @@
 		"strength": 30,
 		"cost": 65,
 		"requiredTech": "Sailing",
-		//"uniques": ["Cannot enter ocean tiles <before discovering [Astronomy]>"],
 		"uniques": ["Cannot enter ocean tiles <before discovering [Cartography]>"],
 		"upgradesTo": "Caravel",
 		"obsoleteTech": "Cartography",
@@ -144,8 +120,8 @@
 		"strength": 35,
 		"cost": 65,
 		"requiredTech": "Sailing",
-		"uniques": ["Double movement in [Coast]", /*"Cannot enter ocean tiles <before discovering [Astronomy]>"*/
-			"Cannot enter ocean tiles <before discovering [Cartography]>"],
+		"uniques": ["[+1] Movement <in [Coast] tiles>", "Ignores Zone of Control", 
+			"Cannot enter ocean tiles <before discovering [Shipbuilding]>"],
 		"upgradesTo": "Caravel",
 		"obsoleteTech": "Cartography",
 		"attackSound": "nonmetalhit"
@@ -159,7 +135,6 @@
 		"strength": 35,
 		"cost": 65,
 		"requiredTech": "Sailing",
-		//"uniques": ["Cannot enter ocean tiles <before discovering [Astronomy]>"],
 		"uniques": ["Cannot enter ocean tiles <before discovering [Cartography]>"],
 		"upgradesTo": "Caravel",
 		"obsoleteTech": "Cartography",
@@ -197,13 +172,13 @@
 		"replaces": "Archer",
 		"unitType": "Ranged",
 		"movement": 3,
-		"strength": 17,
+		"strength": 15,
 		"rangedStrength": 28,
 		"cost": 70,
 		"requiredTech": "Archery",
 		"obsoleteTech": "Machinery",
 		"upgradesTo": "Crossbowman",
-		"uniques": ["[+6]% Strength <vs [Wounded] units>"],
+		"uniques": ["[+6]% Strength <vs [Wounded] units> <when attacking>"],
 		"attackSound": "arrow"
 	},
 	{
@@ -211,19 +186,6 @@
 		"unitType": "Armor",
 		"movement": 2,
 		"strength": 25,
-		"cost": 65,
-		"requiredTech": "Bronze Working",
-		"obsoleteTech": "Military Tactics",
-		"upgradesTo": "Pikeman",
-		"attackSound": "metalhit"
-	},
-	{
-		"name": "Hoplite",
-		"uniqueTo": "Greece",
-		"replaces": "Spearman",
-		"unitType": "Armor",
-		"movement": 2,
-		"strength": 33,
 		"cost": 65,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Military Tactics",
@@ -239,6 +201,7 @@
 		"requiredTech": "Wheel",
 		"upgradesTo": "Knight",
 		"obsoleteTech": "Stirrups",
+		"uniques": ["[+1] Movement <in [Open terrain] tiles>", "Ignores Zone of Control"],
 		"attackSound": "horse"
 	},
 	{
@@ -249,10 +212,11 @@
 		"movement": 3,
 		"strength": 25,
 		"rangedStrength": 35,
-		"cost": 120,
+		"cost": 90,
 		"requiredTech": "Wheel",
 		"obsoleteTech": "Machinery",
 		"upgradesTo": "Crossbowman",
+		"uniques": ["[+2] Movement <in [Open terrain] tiles>", "Ignores Zone of Control"],
 		"attackSound": "arrow"
 	},
 	{
@@ -262,7 +226,7 @@
 		"movement": 4,
 		"strength": 30,
 		"cost": 55,
-		"uniques": ["[+16]% Strength <vs [Anti-Cavalry] units>"],
+		"uniques": ["[+15]% Strength <vs [Anti-Cavalry] units>", "[+1] Movement <in [Open terrain] tiles>", "Ignores Zone of Control"],
 		"upgradesTo": "Knight",
 		"obsoleteTech": "Stirrups",
 		"attackSound": "horse"
@@ -278,7 +242,7 @@
 		"range": 1,
 		"strength": 15,
 		"rangedStrength": 25,
-		"cost": 50,
+		"cost": 100,
 		"requiredTech": "Horseback Riding",
 		//"obsoleteTech": "Ballistics",
 		//"upgradesTo": "Field Cannon",
@@ -294,7 +258,7 @@
 		"obsoleteTech": "Castles",
 		"requiredResource": "Horses",
 		"upgradesTo": "Courser",
-		"uniques": ["No movement cost to pillage"],
+		"uniques": ["Ignores Zone of Control"],
 		"attackSound": "horse"
 	},
 	{
@@ -309,22 +273,8 @@
 		"obsoleteTech": "Castles",
 		"requiredResource": "Horses",
 		"upgradesTo": "Courser",
-		"promotions": ["Charge"],
 		"uniques": ["[Great General] is earned [50]% faster", "[-10]% Strength for enemy [Military] units in adjacent [All] tiles", 
-			"No movement cost to pillage"],
-		"attackSound": "horse"
-	},
-	{
-		"name": "Varu",
-		"uniqueTo": "India",
-		"unitType": "Mounted",
-		"movement": 2,
-		"strength": 40,
-		"cost": 120,
-		"requiredTech": "Horseback Riding",
-		//"obsoleteTech": "Combustion",
-		//"upgradesTo": "Tank",
-		"uniques": ["[+1] Sight", "[-10]% Strength for enemy [Military] units in adjacent [All] tiles", "No movement cost to pillage"],
+			"Ignores Zone of Control", "Starts with a free promotions"],
 		"attackSound": "horse"
 	},
 	{
@@ -334,9 +284,9 @@
 		"strength": 36,
 		"cost": 90,
 		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
+		"obsoleteTech": "Gunpowder",
 		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
+		"upgradesTo": "Musketman",
 		"attackSound": "metalhit"
 	},
 	{
@@ -348,42 +298,11 @@
 		"strength": 40,
 		"cost": 110,
 		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
+		"obsoleteTech": "Gunpowder",
 		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"uniques": ["Can construct [Roman Fort]"],
+		"upgradesTo": "Musketman",
+		"uniques": ["Can build [Roman Fort] improvements on tiles"],
 		"attackSound": "metalhit"
-	},
-	{
-		"name": "Ngao Mbeba",
-		"uniqueTo": "Kongo",
-		"replaces": "Swordsman",
-		"unitType": "Melee",
-		"movement": 2,
-		"strength": 36,
-		"cost": 110,
-		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
-		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"uniques": ["[+1] Sight", "Double movement in [Forest]", "Double movement in [Jungle]",
-			"[+33]% Strength <vs [Ranged] units> <when defending>"],
-		"attackSound": "metalhit"
-	},
-	{
-		"name": "Immortal",
-		"uniqueTo": "Persia",
-		"replaces": "Swordsman",
-		"unitType": "Ranged",
-		"movement": 2,
-		"strength": 30,
-		"rangedStrength": 25,
-		"cost": 100,
-		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
-		//"upgradesTo": "Musketman",
-		"uniques": ["[+33]% Strength <vs [Anti-Cavalry] units>"],
-		"attackSound": "arrow"
 	},
 	{
 		"name": "Hypaspist",
@@ -394,26 +313,11 @@
 		"strength": 36,
 		"cost": 100,
 		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
+		"obsoleteTech": "Gunpowder",
 		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"uniques": ["[+10]% Strength <vs [Wounded] units>", "[+16]% Strength <vs cities> <when attacking>"],
+		"upgradesTo": "Musketman",
+		"uniques": ["[+15]% Strength <vs cities> <when attacking>"],
 		"attackSound": "metalhit"
-	},
-	{
-		"name": "Toa",
-		"uniqueTo": "The Maori",
-		"replaces": "Swordsman",
-		"unitType": "Melee",
-		"movement": 2,
-		"strength": 36,
-		"cost": 120,
-		"requiredTech": "Iron Working",
-		//"obsoleteTech": "Gunpowder",
-		//"upgradesTo": "Musketman",
-		"uniques": ["Can construct [Pa]", "[-10]% Strength for enemy [Military] units in adjacent [All] tiles", "[-100]% maintenance costs", 
-			"[+10] HP when healing <in [Pa] tiles>"],
-		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Catapult",
@@ -423,8 +327,8 @@
 		"rangedStrength": 35,
 		"cost": 120,
 		"requiredTech": "Engineering",
-		//"obsoleteTech": "Metal Casting",
-		//"upgradesTo": "Bombard",
+		"obsoleteTech": "Metal Casting",
+		"upgradesTo": "Bombard",
 		"uniques": ["Must set up to ranged attack"],
 		"attackSound": "throw"
 	},
@@ -437,9 +341,8 @@
 		"rangedStrength": 25,
 		"cost": 120,
 		"requiredTech": "Shipbuilding",
-		//"obsoleteTech": "Square Rigging",
-		//"upgradesTo": "Frigate",
-		//"uniques": ["Cannot enter ocean tiles <before discovering [Astronomy]>"],
+		"obsoleteTech": "Square Rigging",
+		"upgradesTo": "Frigate",
 		"uniques": ["Cannot enter ocean tiles <before discovering [Cartography]>"],
 		"attackSound": "arrow"
 	},
@@ -454,55 +357,40 @@
 		"rangedStrength": 25,
 		"cost": 120,
 		"requiredTech": "Shipbuilding",
-		//"obsoleteTech": "Square Rigging",
-		//"upgradesTo": "Frigate",
+		"obsoleteTech": "Square Rigging",
+		"upgradesTo": "Frigate",
 		"uniques": ["[+33]% Strength <vs [Land] units>", "[+33]% Strength <vs [Water] units>",
-			//"Cannot enter ocean tiles <before discovering [Astronomy]>"
-			"Cannot enter ocean tiles <before discovering [Cartography]>"
-			],
+			"Cannot enter ocean tiles <before discovering [Cartography]>"],
 		"attackSound": "arrow"
 	},
 	
 	// Medieval era
 	{
-		"name": "Berserker",
-		"uniqueTo": "Norway",
-		"unitType": "Melee",
-		"movement": 3,
-		"strength": 40,
-		"cost": 160,
-		"requiredTech": "Military Tactics",
-		//"obsoleteTech": "Gunpowder",
-		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"uniques": ["[+33]% Strength <when attacking>", "No movement cost to pillage"],
-		"attackSound": "metalhit"
-	},
-	{
-		"name": "Samurai",
-		"uniqueTo": "Japan",
-		"unitType": "Melee",
-		"movement": 2,
-		"strength": 48,
-		"cost": 160,
-		"requiredTech": "Military Tactics",
-		//"obsoleteTech": "Gunpowder",
-		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"attackSound": "metalhit"
-	},
-	{
-		"name": "Khevsur",
-		"uniqueTo": "Georgia",
+		"name": "Man-At-Arms",
 		"unitType": "Melee",
 		"movement": 2,
 		"strength": 45,
 		"cost": 160,
 		"requiredTech": "Military Tactics",
-		//"obsoleteTech": "Gunpowder",
+		"obsoleteTech": "Gunpowder",
 		"requiredResource": "Iron",
-		//"upgradesTo": "Musketman",
-		"uniques": ["Ignores terrain cost", "[+25]% Strength <when fighting in [Hill] tiles> <when attacking>"],
+		"upgradesTo": "Musketman",
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Berserker",
+		"uniqueTo": "Norway",
+		"replaces": "Man-At-Arms",
+		"unitType": "Melee",
+		"movement": 3,
+		"strength": 48,
+		"cost": 160,
+		"requiredTech": "Military Tactics",
+		"obsoleteTech": "Gunpowder",
+		"requiredResource": "Iron",
+		"upgradesTo": "Musketman",
+		"uniques": ["[+2] Movement <in [Enemy Land] tiles>", "[+33]% Strength <when attacking>", 
+			"[-15]% Strength <vs [Melee] units> <when defending>"],
 		"attackSound": "metalhit"
 	},
 	{
@@ -512,8 +400,8 @@
 		"strength": 41,
 		"cost": 180,
 		"requiredTech": "Military Tactics",
-		//"obsoleteTech": "Metal Casting",
-		//"upgradesTo": "Pike and Shot",
+		"obsoleteTech": "Metal Casting",
+		"upgradesTo": "Pike and Shot",
 		"attackSound": "metalhit"
 	},
 	{
@@ -525,35 +413,22 @@
 		"strength": 41,
 		"cost": 125,
 		"requiredTech": "Military Tactics",
-		//"obsoleteTech": "Metal Casting",
-		//"upgradesTo": "Pike and Shot",
-		"uniques": ["[+20]% Strength <vs [Wounded] units>", "[50]% XP gained from combat"],
+		"obsoleteTech": "Metal Casting",
+		"upgradesTo": "Pike and Shot",
+		"uniques": ["[+25]% XP gained from combat"],
 		"attackSound": "metalhit"
 	},
 	{
 		"name": "Knight",
 		"unitType": "Mounted",
 		"movement": 4,
-		"strength": 48,
+		"strength": 50,
 		"cost": 220,
 		"requiredTech": "Stirrups",
 		//"obsoleteTech": "Ballistics",
 		"requiredResource": "Iron",
 		//"upgradesTo": "Cuirassier",
-		"attackSound": "horse"
-	},
-	{
-		"name": "Tagma",
-		"uniqueTo": "Byzantium",
-		"replaces": "Knight",
-		"unitType": "Mounted",
-		"movement": 4,
-		"strength": 48,
-		"cost": 220,
-		//"obsoleteTech": "Ballistics",
-		"requiredResource": "Iron",
-		//"upgradesTo": "Cuirassier",
-		"uniques": ["Bonus for units in 2 tile radius 15%", "Only available <after adopting [Divine Right]>"],
+		"uniques": ["Ignores Zone of Control"],
 		"attackSound": "horse"
 	},
 	{
@@ -562,13 +437,13 @@
 		"replaces": "Knight",
 		"unitType": "Mounted",
 		"movement": 4,
-		"strength": 48,
+		"strength": 50,
 		"cost": 220,
 		"requiredTech": "Stirrups",
 		//"obsoleteTech": "Ballistics",
 		"requiredResource": "Iron",
 		//"upgradesTo": "Cuirassier",
-		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"uniques": ["Ignores Zone of Control", "Unit will heal every turn, even if it performs an action"],
 		"attackSound": "horse"
 	},
 	{
@@ -577,26 +452,13 @@
 		"replaces": "Knight",
 		"unitType": "Mounted",
 		"movement": 4,
-		"strength": 49,
+		"strength": 55,
 		"cost": 220,
 		"requiredTech": "Stirrups",
 		//"obsoleteTech": "Ballistics",
 		"requiredResource": "Iron",
 		//"upgradesTo": "Cuirassier",
-		"uniques": ["Heals [25] damage if it kills a unit"],
-		"attackSound": "horse"
-	},
-	{
-		"name": "Winged Hussar",
-		"uniqueTo": "Poland",
-		"unitType": "Mounted",
-		"movement": 4,
-		"strength": 55,
-		"cost": 220,
-		//"obsoleteTech": "Ballistics",
-		"requiredResource": "Iron",
-		//"upgradesTo": "Cuirassier",
-		"uniques": ["[+15]% Strength <when attacking>", "Only available <after adopting [Mercenaries]>"],
+		"uniques": ["Ignores Zone of Control", "Earn [100]% of killed [All] unit's [Strength] as [Gold]"],
 		"attackSound": "horse"
 	},
 	{
@@ -604,13 +466,14 @@
 		"uniqueTo": "Mongolia",
 		"unitType": "Ranged",
 		"movement": 4,
-		"strength": 33,
+		"strength": 35,
 		"rangedStrength": 40,
-		"cost": 180,
+		"cost": 160,
 		"requiredTech": "Stirrups",
 		//"obsoleteTech": "Ballistics",
 		//"upgradesTo": "Field Cannon",
-		"uniques": ["[-57]% Strength <vs [Water] units>", "[-57]% Strength <vs cities> <when attacking>"],
+		"uniques": ["[-57]% Strength <vs [Water] units>", "[-57]% Strength <vs cities> <when attacking>", 
+			"Transfer Movement to [Civilian]"],
 		"attackSound": "arrow"
 	},
 	{
@@ -673,13 +536,13 @@
 		"name": "Courser",
 		"unitType": "Mounted",
 		"movement": 5,
-		"strength": 44,
+		"strength": 46,
 		"cost": 200,
 		"requiredTech": "Castles",
 		//"obsoleteTech": "Military Science",
 		"requiredResource": "Horses",
 		//"upgradesTo": "Cavalry",
-		"uniques": ["No movement cost to pillage"],
+		"uniques": ["Ignores Zone of Control"],
 		"attackSound": "horse"
 	},
 	{
@@ -688,13 +551,13 @@
 		"replaces": "Courser",
 		"unitType": "Mounted",
 		"movement": 5,
-		"strength": 46,
+		"strength": 48,
 		"cost": 200,
 		"requiredTech": "Castles",
 		//"obsoleteTech": "Military Science",
 		"requiredResource": "Horses",
 		//"upgradesTo": "Cavalry",
-		"uniques": ["Double movement in [Snow]", "Double movement in [Tundra]", "Double movement in [Hill]", "[+1] Sight"],
+		"uniques": ["Ignores Zone of Control", "Double movement in [Hill]", "[+1] Sight"],
 		"attackSound": "horse"
 	},
 	{
@@ -703,19 +566,19 @@
 		"replaces": "Courser",
 		"unitType": "Mounted",
 		"movement": 5,
-		"strength": 47,
+		"strength": 49,
 		"cost": 205,
 		"requiredTech": "Castles",
 		//"obsoleteTech": "Military Science",
 		"requiredResource": "Horses",
 		//"upgradesTo": "Cavalry",
-		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"],
+		"uniques": ["[-5]% Strength for enemy [Military] units in adjacent [All] tiles"], // +5 for each adjacent levied units
 		"attackSound": "horse"
 	},
 	{
 		"name": "Jong",
 		"uniqueTo": "Indonesia",
-		//"replaces": "Frigate",
+		"replaces": "Frigate",
 		"unitType": "Ranged Water",
 		"movement": 5,
 		"strength": 45,
@@ -723,13 +586,14 @@
 		"cost": 300,
 		//"obsoleteTech": "Steel",
 		//"upgradesTo": "Battleship",
-		"uniques": ["Only available <after adopting [Mercenaries]>"],
-		"attackSound": "shot"
+		"uniques": ["Only available <after adopting [Mercenaries]>", "Transfer Movement to [Civilian]", 
+			"[+15]% Strength <when adjacent to a [Jong] unit>"],
+		"attackSound": "cannon"
 	},
 	{
 		"name": "Barbary Corsair",
 		"uniqueTo": "The Ottomans",
-		//"replaces": "Privateer",
+		"replaces": "Privateer",
 		"unitType": "Submarine",
 		"movement": 4,
 		"strength": 40,
@@ -737,8 +601,9 @@
 		"cost": 240,
 		//"obsoleteTech": "Electricity",
 		//"upgradesTo": "Submarine",
-		"uniques": ["No movement cost to pillage", "Only available <after adopting [Medieval Faires]>"],
-		"attackSound": "shot"
+		"uniques": ["Ignores Zone of Control", "No movement cost to pillage", 
+			"Only available <after adopting [Medieval Faires]>"],
+		"attackSound": "torpedo"
 	},
 	
 	// Renaissance era
@@ -752,9 +617,101 @@
 		//"obsoleteTech": "Steam Power",
 		///"upgradesTo": "Ironclad",
 		"uniques": ["[+1] Sight"],
-		"attackSound": "nonmetalhit"
+		"attackSound": "cannon"
 	},
-
+	{
+		"name": "Musketman",
+		"unitType": "Melee",
+		"movement": 2,
+		"strength": 55,
+		"cost": 240,
+		"requiredTech": "Gunpowder",
+		//"obsoleteTech": "Replaceable Parts",
+		"requiredResource": "Niter",
+		//"upgradesTo": "Infantry",
+		"attackSound": "shot"
+	},
+	{
+		"name": "Janissary",
+		"uniqueTo": "The Ottomans",
+		"replaces": "Musketman",
+		"unitType": "Melee",
+		"movement": 2,
+		"strength": 60,
+		"cost": 120,
+		"requiredTech": "Gunpowder",
+		//"obsoleteTech": "Replaceable Parts"
+		"requiredResource": "Niter",
+		//"upgradesTo": "Infantry",
+		"promotions": ["Battlecry"], // Start with 1 free promotions
+		"uniques": [""],
+		"attackSound": "shot"
+	},
+	{
+		"name": "Hwacha",
+		"uniqueTo": "Korea",
+		//"replaces": "Field Cannon",
+		"unitType": "Ranged",
+		"movement": 2,
+		"strength": 45,
+		"rangedStrength": 60,
+		"cost": 250,
+		"requiredTech": "Gunpowder",
+		//"obsoleteTech": "Advanced Ballistics",
+		//"upgradesTo": "Machine Gun",
+		"uniques": ["Must set up to ranged attack"],
+		"attackSound": "arrow"
+	},
+	{
+		"name": "Frigate",
+		"unitType": "Ranged Water",
+		"movement": 4,
+		"strength": 45,
+		"rangedStrength": 55,
+		"cost": 280,
+		"requiredTech": "Square Rigging",
+		//"obsoleteTech": "Steel",
+		"requiredResource": "Niter",
+		//"upgradesTo": "Battleship",
+		"attackSound": "cannon"
+	},
+	{
+		"name": "Pike and Shot",
+		"unitType": "Anti-Cavalry",
+		"movement": 2,
+		"strength": 55,
+		"cost": 250,
+		"requiredTech": "Metal Casting",
+		//"obsoleteTech": "Chemistry",
+		//"upgradesTo": "AT Crew",
+		"attackSound": "shot"
+	},
+	{
+		"name": "Bombard",
+		"unitType": "Siege",
+		"movement": 2,
+		"strength": 43,
+		"rangedStrength": 55,
+		"cost": 280,
+		"requiredTech": "Metal Casting",
+		//"obsoleteTech": "Steel",
+		"requiredResource": "Niter",
+		//"upgradesTo": "Artillery",
+		"uniques": ["Must set up to ranged attack"],
+		"attackSound": "cannon"
+	},
+	{
+		"name": "Privateer",
+		"unitType": "Submarine",
+		"movement": 4,
+		"strength": 40,
+		"rangedStrength": 50,
+		"cost": 280,
+		//"obsoleteTech": "Electricity",
+		//"upgradesTo": "Submarine",
+		"uniques": ["Ignores Zone of Control", "Only available <after adopting [Mercantilism]>"],
+		"attackSound": "torpedo"
+	},
 
 	// Great People
 	{

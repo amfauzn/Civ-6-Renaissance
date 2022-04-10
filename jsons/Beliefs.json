@@ -290,7 +290,7 @@
     {
         "name": "Scripture",
         "type": "Enhancer",
-        "uniques": ["[+25]% Natural religion spread [in all cities]", //"[+50]% Natural religion spread [in all cities] <after discovering [Printing]>"
+        "uniques": ["[+25]% Natural religion spread [in all cities]", "[+50]% Natural religion spread [in all cities] <after discovering [Printing]>"
 		]
     },
     

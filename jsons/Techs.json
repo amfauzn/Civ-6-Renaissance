@@ -230,23 +230,85 @@
 	},
 	{
 		"columnNumber": 7,
-		"era": "Medieval era",
+		"era": "Renaissance era",
 		"techCost": 490, 
 		"buildingCost": 300,
 		"wonderCost": 750,
 		"techs": [
 			{
 				"name": "Cartography",
-				"row": 6,
 				"uniques": ["Enables [Embarked] units to enter ocean tiles"],
-				"prerequisites": ["Education","Military Engineering","Castles"],
+				"row": 2,
+				"prerequisites": ["Buttress"],
 				"quote": "'If your actions inspire others to dream more, learn more, do more and become more, you are a cartographer.' - John Quincy Adams"
+			},
+			{
+				"name": "Mass Production",
+				"row": 3,
+				"prerequisites": ["Buttress","Military Tactics","Education"],
+				"quote": "'What can be labeled, packaged, mass produced is neither truth nor art.' - Marty Rubin"
+			},
+			{
+				"name": "Astronomy",
+				"cost": 600,
+				"row": 4,
+				"prerequisites": ["Education"],
+				"quote": "'Astronomy's much more fun when you're not an astronomer.' - Brian Miller"
+			},
+			{
+				"name": "Banking",
+				"cost": 540,
+				"row": 5,
+				"prerequisites": ["Education","Stirrups"],
+				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
+			},
+			{
+				"name": "Gunpowder",
+				"row": 6,
+				"prerequisites": ["Military Engineering","Stirrups","Apprenticeship"],
+				"quote": "'The real use of gunpowder is to make all men tall.' - Thomas Carlyle"
+			},
+			{
+				"name": "Siege Tactics",
+				"cost": 660,
+				"row": 8,
+				"prerequisites": ["Castles"],
+				"quote": "'The lowest is to attack a city. Siege of a city is only done as a last resort.' - Sun Tzu"
+			},
+			{
+				"name": "Printing",
+				"row": 9,
+				"prerequisites": ["Machinery"],
+				"quote": "'What gunpowder did for war the printing press has done for the mind.' - Wendell Phillips"
 			}
 		]	
 	},
 	{
 		"columnNumber": 8,
-		"era": "Medieval era",
+		"era": "Renaissance era",
+		"techCost": 600,
+		"buildingCost": 360,
+		"wonderCost": 920,
+		"techs": [
+			{
+				"name": "Square Rigging",
+				"row": 2,
+				"prerequisites": ["Cartography"],
+				"quote": "'There is little man has made that approaches anything in nature, but a sailing ship does.' - Allan Villers"
+			},
+
+			{
+				"name": "Metal Casting",
+				"cost": 660,
+				"row": 6,
+				"prerequisites": ["Gunpowder"],
+				"quote": "'Don't judge someone until you've stood at his forge and worked with his hammer.' - Rick Riordan"
+			}
+		]	
+	},
+	{
+		"columnNumber": 9,
+		"era": "Renaissance era",
 		"techCost": 2600,
 		"buildingCost": 750,
 		"wonderCost": 1250,
@@ -255,7 +317,7 @@
 				"name": "Future Tech",
 				"row": 6,
 				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
-				"prerequisites": ["Cartography"],
+				"prerequisites": ["Square Rigging","Metal Casting"],
 				"quote": "'There is nothing like a dream to create the future' - Victor Hugo"
 			}
 		]	

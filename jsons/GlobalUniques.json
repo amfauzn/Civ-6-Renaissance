@@ -11,6 +11,9 @@
 		"[-50]% Unhappiness from [Population] [in all cities]",
 		"Gain a free [City Center] [in all cities]",
 		"[+1] Happiness from each type of luxury resource",
-		"[+1 Happiness] [in all cities]"
+		"[+1 Happiness] from every [City Center] <in cities with at least [3] [Population]>",
+		"[-1 Gold] from [River] tiles [in all cities]",
+		"[+2 Food] from every [Desert]",
+		"[-2 Food] from [Desert] tiles without [Flood plains] [in all cities]"
     ]
 }

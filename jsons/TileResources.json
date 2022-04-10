@@ -25,7 +25,7 @@
 		"improvementStats": {"production": 1}
 	},
 	{
-		"name": "Crabs",
+		"name": "Crab",
 		"resourceType": "Bonus",
 		"terrainsCanBeFoundOn": ["Coast","Lakes"],
 		"gold": 2,
@@ -207,7 +207,7 @@
 		"name": "Dyes",
 		"resourceType": "Luxury",
 		"terrainsCanBeFoundOn": ["Jungle","Forest"],
-		"culture": 1,
+		"faith": 1,
 		"improvement": "Plantation",
 		"improvementStats": {"gold": 1}
 	},
@@ -240,7 +240,7 @@
 		"name": "Incense",
 		"resourceType": "Luxury",
 		"terrainsCanBeFoundOn": ["Plains","Desert"],
-		"culture": 2,
+		"faith": 1,
 		"improvement": "Plantation",
 		"improvementStats": {"gold": 1},
 		"building": "Monastery"
@@ -291,7 +291,7 @@
 		"name": "Pearls",
 		"resourceType": "Luxury",
 		"terrainsCanBeFoundOn": ["Coast","Lakes"],
-		"culture": 1,
+		"faith": 1,
 		"improvement": "Fishing Boats",
 		"improvementStats": {"food": 1}
 	},
@@ -347,7 +347,7 @@
 		"name": "Tobacco",
 		"resourceType": "Luxury",
 		"terrainsCanBeFoundOn": ["Jungle","Forest","Grassland","Plains"],
-		"culture": 1,
+		"faith": 1,
 		"improvement": "Plantation",
 		"improvementStats": {"gold": 1}
 	},

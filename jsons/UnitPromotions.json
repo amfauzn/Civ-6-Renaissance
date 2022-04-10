@@ -9,12 +9,12 @@
 	// Scout (Recon)
 	{
 		"name": "Ranger",
-		"uniques": ["Double movement in [Forest]", "Double movement in [Jungle]"],
+		"uniques": ["[+1] Movement <in [Forest] tiles>", "[+1] Movement <in [Jungle] tiles>"],
 		"unitTypes": ["Scout"]
 	},
 	{
 		"name": "Alpine",
-		"uniques": ["[+1] Movement"],
+		"uniques": ["[+1] Movement <in [Hill] tiles>"],
 		"unitTypes": ["Scout"]
 	},
 	{
@@ -38,16 +38,59 @@
 	{
 		"name": "Ambush",
 		"prerequisites": ["Guerrilla"],
-		"uniques": ["[+20]% Strength"],
+		"uniques": ["[+33]% Strength"],
 		"unitTypes": ["Scout"]
 	},
 	{
 		"name": "Camouflage",
 		"prerequisites": ["Spyglass","Ambush"],
-		"uniques": ["[+1] Movement"],
+		"uniques": ["Invisible to non-adjacent units"],
 		"unitTypes": ["Scout"]
-	},	
-
+	},
+	
+	// Melee
+	{
+		"name": "Battlecry",
+		"uniques": ["[+25]% Strength <vs [Melee] units> <when attacking>", "[+25]% Strength <vs [Ranged] units> <when attacking>"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Tortoise",
+		"uniques": ["[+33]% Strength <when defending>"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Commando",
+		"prerequisites": ["Battlecry"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Amphibious",
+		"prerequisites": ["Tortoise","Commando"],
+		"uniques": ["Eliminates combat penalty for attacking over a river", "Eliminates combat penalty for attacking across a coast"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Zweihander",
+		"prerequisites": ["Commando","Amphibious"],
+		"uniques": ["[+25]% Strength <vs [Anti-Cavalry] units>"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Urban Warfare",
+		"prerequisites": ["Commando","Amphibious"],
+		"uniques": ["[+33]% Strength <when fighting in [Friendly Land] tiles> <with [1] to [6] neighboring [City center] tiles>", 
+			"[+33]% Strength <in [Holy site] tiles>"],
+		"unitTypes": ["Melee"]
+	},
+	{
+		"name": "Elite Guard",
+		"prerequisites": ["Zweihander","Urban Warfare"],
+		"uniques": ["[1] additional attacks per turn", "Can move after attacking"],
+		"unitTypes": ["Melee"]
+	},
+	
 	// Ranged
 	{
 		"name": "Volley",
@@ -62,7 +105,7 @@
 	{
 		"name": "Arrow Storm",
 		"prerequisites": ["Volley"],
-		"uniques": ["[+25]% Strength <vs [Land] units> <when attacking>","[+25]% Strength <vs [Water] units> <when attacking>"],
+		"uniques": ["[+25]% Strength <vs [Land] units> <when attacking>", "[+25]% Strength <vs [Water] units> <when attacking>"],
 		"unitTypes": ["Ranged"]
 	},
 	{
@@ -74,13 +117,13 @@
 	{
 		"name": "Suppression",
 		"prerequisites": ["Arrow Storm","Incendiaries"],
-		"uniques": ["Ranged attacks may be performed over obstacles"],
+		"uniques": ["Ranged attacks may be performed over obstacles"], // Ignores Zone of Control
 		"unitTypes": ["Ranged"]
 	},
 	{
 		"name": "Emplacement",
 		"prerequisites": ["Arrow Storm","Incendiaries"],
-		"uniques": ["Bonus vs City 33%"],
+		"uniques": ["[+33]% Strength <vs cities> <when defending>"],
 		"unitTypes": ["Ranged"]
 	},
 	{
@@ -116,13 +159,13 @@
 	{
 		"name": "Advanced Rangefinding",
 		"prerequisites": ["Shrapnel","Shells"],
-		"uniques": ["[+33]% Strength <vs [Land] units> <when attacking>"],
+		"uniques": ["[+33]% Strength <vs [Water] units> <when attacking>"],
 		"unitTypes": ["Siege"]
 	},
 	{
 		"name": "Expert Crew",
 		"prerequisites": ["Shrapnel","Shells"],
-		"uniques": ["Can move after attacking"],
+		"uniques": ["Can move after attacking"], // attack after moving
 		"unitTypes": ["Siege"]
 	},
 	{
@@ -131,54 +174,17 @@
 		"uniques": ["[+1] Range"],
 		"unitTypes": ["Siege"]
 	},
-	
-	// Melee
-	{
-		"name": "Battlecry",
-		"uniques": ["[+25]% Strength <vs [Melee] units> <when attacking>", "[+25]% Strength <vs [Ranged] units> <when attacking>"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Tortoise",
-		"uniques": ["[+33]% Strength <when defending>"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Commando",
-		"prerequisites": ["Battlecry"],
-		"uniques": ["[+1] Movement"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Amphibious",
-		"prerequisites": ["Tortoise","Commando"],
-		"uniques": ["Eliminates combat penalty for attacking over a river", "Eliminates combat penalty for attacking across a coast"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Zweihander",
-		"prerequisites": ["Commando","Amphibious"],
-		"uniques": ["[+25]% Strength <vs [Anti-Cavalry] units>"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Urban Warfare",
-		"prerequisites": ["Commando","Amphibious"],
-		"uniques": ["[+30]% Strength <when fighting in [Friendly Land] tiles>"],
-		"unitTypes": ["Melee"]
-	},
-	{
-		"name": "Elite Guard",
-		"prerequisites": ["Zweihander","Urban Warfare"],
-		"uniques": ["[1] additional attacks per turn","Can move after attacking"],
-		"unitTypes": ["Melee"]
-	},
 
 	// Warrior Monk
 	{
 		"name": "Shadow Strike",
-		"uniques": ["[+10]% Strength"],
+		"uniques": ["[+100]% to Flank Attack bonuses"],
 	},
+	/*{
+		"name": "Twilight Veil",
+		"uniques": ["Invisible to non-adjacent units"],
+		"unitTypes": []
+	},*/
 	{
 		"name": "Exploding Palms",
 		"prerequisites": ["Shadow Strike"],
@@ -198,7 +204,7 @@
 	},
 	{
 		"name": "Cobra Strike",
-		"prerequisites": ["Sweeping Wind", "Dancing Crane"],
+		"prerequisites": ["Sweeping Wind","Dancing Crane"],
 		"uniques": ["[+50]% Strength"],
 	},
 
@@ -216,13 +222,13 @@
 	{
 		"name": "Square",
 		"prerequisites": ["Echelon"],
-		"uniques": ["All healing effects doubled"],
+		"uniques": ["All healing effects doubled"], // Double support
 		"unitTypes": ["Anti-Cavalry"]
 	},
 	{
 		"name": "Schiltron",
 		"prerequisites": ["Thrust"],
-		"uniques": ["[+15]% Strength <vs [Melee] units> <when attacking>"],
+		"uniques": ["[+15]% Strength <vs [Melee] units> <when defending>"],
 		"unitTypes": ["Anti-Cavalry"]
 	},
 	{
@@ -234,13 +240,13 @@
 	{
 		"name": "Choke Points",
 		"prerequisites": ["Square","Schiltron"],
-		"uniques": ["[+25]% Strength <when fighting in [Rough terrain] tiles> <when attacking>"],
+		"uniques": ["[+25]% Strength <when fighting in [Rough terrain] tiles> <when defending>"],
 		"unitTypes": ["Anti-Cavalry"]
 	},
 	{
 		"name": "Hold the Line",
 		"prerequisites": ["Choke Points","Redeploy"],
-		"uniques": ["Bonus for units in 2 tile radius 15%"],
+		"uniques": ["Bonus for units in 2 tile radius 15%"], // vs Mounted
 		"unitTypes": ["Anti-Cavalry"]
 	},
 	
@@ -284,8 +290,50 @@
 		"prerequisites": ["Armor Piercing","Reactive Armor"],
 		"uniques": ["[1] additional attack per turn"],
 		"unitTypes": ["Mounted"]
-	},	
-
+	},
+	
+	// Melee Water
+	{
+		"name": "Helmsman",
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Embolon",
+		"uniques": ["[+25]% Strength <vs [Water] units>"],
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Rutter",
+		"prerequisites": ["Helmsman"],
+		"uniques": ["[+1] Sight"],
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Reinforced Hull",
+		"prerequisites": ["Embolon"],
+		"uniques": ["[+25]% Strength <vs [Ranged] units> <when defending>"],
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Convoy",
+		"prerequisites": ["Rutter","Reinforced Hull"],
+		"uniques": ["[+20]% Strength <when adjacent to a [{Military} {Water}] unit>"], // +33% in formation
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Auxillary Ships",
+		"prerequisites": ["Rutter","Reinforced Hull"],
+		"uniques": ["May heal outside of friendly territory", "[+10] HP when healing <in [Foreign Land] tiles>"],
+		"unitTypes": ["Melee Water"]
+	},
+	{
+		"name": "Creeping Attack",
+		"prerequisites": ["Convoy","Auxillary Ships"],
+		"uniques": ["[+50]% Strength <vs [Water] units>"], // vs Submarine
+		"unitTypes": ["Melee Water"]
+	},
+	
 	// Water ranged
 	{
 		"name": "Line of Battle",
@@ -306,19 +354,19 @@
 	{
 		"name": "Rolling Barrage",
 		"prerequisites": ["Bombardment"],
-		"uniques": ["[+25]% Strength <vs cities>"],
+		"uniques": ["[+25]% Strength <vs cities> <when attacking>"],
 		"unitTypes": ["Ranged Water"]
 	},
 	{
 		"name": "Supply Fleet",
 		"prerequisites": ["Preparatory Fire","Rolling Barrage"],
-		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"uniques": ["May heal outside of friendly territory", "[+10] HP when healing <in [Foreign Land] tiles>"],
 		"unitTypes": ["Ranged Water"]
 	},
 	{
 		"name": "Proximity Fuses",
 		"prerequisites": ["Preparatory Fire","Rolling Barrage"],
-		"uniques": ["[+25]% Strength <vs [Air] units>"],
+		"uniques": ["[+25]% Strength <vs [Air] units> <when defending>"],
 		"unitTypes": ["Ranged Water"]
 	},
 	{
@@ -327,59 +375,16 @@
 		"uniques": ["[+1] Range"],
 		"unitTypes": ["Ranged Water"]
 	},
-
-	// Water melee
-	{
-		"name": "Helmsman",
-		"uniques": ["[+1] Movement"],
-		"unitTypes": ["Melee Water"]
-	},
-	{
-		"name": "Embolon",
-		"uniques": ["[+25]% Strength <vs [Water] units>"],
-		"unitTypes": ["Melee Water"]
-	},
-	{
-		"name": "Rutter",
-		"prerequisites": ["Helmsman"],
-		"uniques": ["[+1] Sight"],
-		"unitTypes": ["Melee Water"]
-	},
-	
-	{
-		"name": "Reinforced Hull",
-		"prerequisites": ["Embolon"],
-		"uniques": ["[+25]% Strength <vs [Ranged] units> <when defending>"],
-		"unitTypes": ["Melee Water"]
-	},
-	{
-		"name": "Convoy",
-		"prerequisites": ["Rutter","Reinforced Hull"],
-		"uniques": ["[+20]% Strength <when attacking>"],
-		"unitTypes": ["Melee Water"]
-	},
-	{
-		"name": "Auxillary Ships",
-		"prerequisites": ["Rutter","Reinforced Hull"],
-		"uniques": ["Unit will heal every turn, even if it performs an action"],
-		"unitTypes": ["Melee Water"]
-	},
-	{
-		"name": "Creeping Attack",
-		"prerequisites": ["Convoy","Auxillary Ships"],
-		"uniques": ["[+50]% Strength <vs [Water] units>"],
-		"unitTypes": ["Melee Water"]
-	},
 	
 	// Submarine
 	{
 		"name": "Loot",
-		"uniques": ["No movement cost to pillage"],
+		"uniques": ["No movement cost to pillage", "Earn [33]% of the damage done to [City] units as [Gold]"],
 		"unitTypes": ["Submarine"]
 	},
 	{
 		"name": "Boarding",
-		"uniques": ["[+50]% Strength <vs cities>"],
+		"uniques": ["Earn [100]% of killed [Water] unit's [Strength] as [Gold]"],
 		"unitTypes": ["Submarine"]
 	},
 	{
@@ -417,42 +422,42 @@
 	{
 		"name": "Flight Deck",
 		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Scout Planes",
 		"uniques": ["[+1] Sight"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Hangar Deck",
 		"prerequisites": ["Flight Deck","Advanced Engines"],
 		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Advanced Engines",
 		"prerequisites": ["Scout Planes","Hangar Deck"],
 		"uniques": ["[+1] Movement"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Folding Wings",
 		"prerequisites": ["Hangar Deck","Deck Crews"],
 		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Deck Crews",
 		"prerequisites": ["Advanced Engines","Folding Wings"],
-		"uniques": ["Heals [50] damage if it kills a unit"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"unitTypes": ["Aircraft Carrier"]
 	},
 	{
 		"name": "Supercarrier",
 		"prerequisites": ["Deck Crews","Folding Wings"],
-		"uniques": ["Unit will heal every turn, even if it performs an action"],
-		"unitTypes": ["WaterAircraftCarrier"]
+		"uniques": ["May heal outside of friendly territory", "[+10] HP when healing <in [Foreign Land] tiles>"],
+		"unitTypes": ["Aircraft Carrier"]
 	},
 
 	// Bomber
@@ -541,6 +546,11 @@
 
 	// Uniques
 	{
+		"name": "Water of Life", // only for Units that have been close to Natural Wonder Fountain of Youth
+		"uniques": ["[+10] HP when healing"]
+	},
+	
+	{
 		"name": "Taxis", // Byzantium
 		"uniques": ["[10]% Strength"]
 	},
@@ -549,16 +559,18 @@
 		"uniques": ["Bonus vs City 33%"]
 	},
 	{
-		"name": "Mongol Horde", // Mongolia
-		"uniques": ["[15]% Strength"],
+		"name": "Mit'a", // Inca's Worker
+		"uniques": ["Can pass through impassable tiles"]
 	},
 	{
 		"name": "Ordu", // Mongolia
 		"uniques": ["[+1] Movement"]
 	},
 	{
-		"name": "Ta-Seti", // Nubia
-		"uniques": ["[50]% XP gained from combat"]
+		"name": "Founder of Chartage", // Phoenicia
+		"uniques": ["[+2] Movement <in [Coast] tiles>", "[+2] Movement <in [Ocean] tiles>", 
+			"[+1] Sight <in [Coast] tiles>", "[+1] Sight <in [Ocean] tiles>", "[1] Movement point cost to embark", 
+			"[1] Movement point cost to disembark"]
 	},
 	{
 		"name": "Royal Navy Dockyard", // England
@@ -590,9 +602,5 @@
 	{
 		"name": "Ignore terrain cost",
 		"uniques": ["Ignores terrain cost"]
-	},
-	{
-		"name": "Rejuvenation", // only for Units that have been close to Natural Wonder Fountain of Youth
-		"uniques": ["All healing effects doubled"]
 	}
 ]

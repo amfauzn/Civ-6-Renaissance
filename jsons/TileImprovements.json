@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Farm",
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Flood plains","Plains Floodplains"],
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Flood plains"],
 		"food": 1,
 		"turnsToBuild": 7,
 		"shortcutKey": "F"
@@ -61,7 +61,11 @@
 		"name": "Quarry",
 		"production": 1,
 		"turnsToBuild": 8,
-		"techRequired": "Mining"
+		"techRequired": "Mining",
+		"uniques": ["[+1 Production] <after discovering [Gunpowder]>",
+			//"[+1 Production] <after discovering [Rocketry]>",
+			//"[+1 Production] <after discovering [Predictive Systems]>"
+			],
 		"shortcutKey": "Q"
 	},
 	{
@@ -78,7 +82,7 @@
 	// Special improvement
 	{
 		"name": "Trade Route (Domestic)",
-		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Plains Floodplains","Marsh","Oasis"],
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Marsh","Oasis"],
 		"food": 1,
 		"production": 1,
 		"uniques": ["Provides [-1] [Trade Route]","Will not be displayed in Civilopedia"]
@@ -103,7 +107,7 @@
 		"faith": 4,
 		"uniques": ["District", "[+2 Faith] for each adjacent [Natural Wonder]", "[+1 Faith] for each adjacent [Mountain]", 
 			"[+1 Faith] <with [2] to [3] neighboring [unimproved] [Forest] tiles>", "[+2 Faith] <with [4] to [5] neighboring [unimproved] [Forest] tiles>", 
-			"[+1 Faith] <with [6] to [6] neighboring [unimproved] [Forest] tiles>"]
+			"[+3 Faith] <with [6] to [6] neighboring [unimproved] [Forest] tiles>"]
 	},
 
 	// Military improvement
@@ -111,8 +115,7 @@
 		"name": "Fort",
 		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
 		"turnsToBuild": 6,
-		//"techRequired": "Siege Tactics",
-		"techRequired": "Construction",
+		"techRequired": "Siege Tactics",
 		"uniques": ["Gives a defensive bonus of [25]%", "Can be built outside your borders"],
 		"shortcutKey": "O"
 	},
@@ -191,15 +194,11 @@
 
 	//Civilization unique improvements
 	{
-		"name": "Pa",
-		"terrainsCanBeBuiltOn": ["Hill"],
-		"uniques": ["Gives a defensive bonus of [25]%",	"Can only be built by Toa"]
-	},
-	{
 		"name": "Roman Fort",
 		"uniqueTo": "Rome",
-		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Plains Floodplains","Marsh","Oasis"],
-		"uniques": ["Gives a defensive bonus of [25]%", "Can only be built by Roman Legion"]
+		"turnsToBuild": 6,
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Hill","Tundra","Forest","Jungle","Flood plains","Marsh","Oasis"],
+		"uniques": ["Gives a defensive bonus of [25]%"]
 	},
 	{
 		"name": "Terrace farm",
@@ -211,23 +210,13 @@
 		//Aqueducts should give +2 production per Terrace Farm
 	},
 	{
-		"name": "Chemamull",
-		"uniqueTo": "The Mapuche",
-		"culture": 1,
-		"culture": 1,
-		"turnsToBuild":7,
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Tundra"],
-		"uniques": ["Only available <after adopting [Craftsmanship]>"],
-	},
-	{ 
-		"name": "Rock-Hewn Church",
-		"uniqueTo": "Ethiopia",
-		"faith": 1,
+		"name": "Ziggurat",
+		"uniqueTo": "Sumeria",
+		"science": 2,
 		"turnsToBuild": 7,
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra"],
-		"uniques": ["[+1 Faith] for each adjacent [Mountain]", "[+1 Faith] for each adjacent [Hill]",
-			"Only available <after adopting [Drama and Poetry]>", "[-1 Faith] for each adjacent [Rock-Hewn Church]",
-			//"[+1 Tourism] <after discovering [Flight]>"
+		"terrainsCanBeBuiltOn": ["Grassland","Desert","Plains","Flood plains","Tundra"],
+		"uniques": ["[+1 Culture] <with [1] to [6] neighboring [River] tiles>",
+			//"+1 Culture once Natural History is adopted"
 			]
 	},
 	{
@@ -236,7 +225,7 @@
 		"production": 1,
 		"turnsToBuild": 7,
 		"techRequired": "Pottery",
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra"],
 		"uniques": ["[+1 Food] <with [2] to [6] neighboring [Bonus resource] tiles>", 
 			"[+2 Gold] <with [1] to [1] neighboring [Luxury resource] tiles> <after discovering [Cartography]>",
 			"[+4 Gold] <with [2] to [6] neighboring [Luxury resource] tiles> <after discovering [Cartography]>"
@@ -244,73 +233,26 @@
 			]
 	},
 	{
-		"name": "Pairidaeza",
-		"uniqueTo": "Persia",
-		"overrideStats": true,
-		"culture": 1,
-		"gold": 2,
-		"happiness": 1,
-		"turnsToBuild": 7,
-		"techRequired": "Pottery",
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill"],
-		"uniques": ["[+1 Culture, +1 Gold] for each adjacent [City center]", 
-			//"once Diplomatic Service is adopted"
-			]
-	},
-	{
-		"name": "Sphinx",
-		"uniqueTo": "Egypt",
-		"culture": 2,
-		"faith": 1,
-		"turnsToBuild": 7,
-		"techRequired": "Pottery",
-		"terrainsCanBeBuiltOn": ["Flood plains","Plains Floodplains"],
-		//"uniques": ["+1 Culture once Natural History is adopted"]
-	},
-	{
-		"name": "Stepwell",
-		"uniqueTo": "India",
-		"food": 1,
-		"turnsToBuild": 7,
-		"techRequired": "Pottery",
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra"],
-		"uniques": ["[+1 Food] for each adjacent [Farm]", "[+1 Faith] for each adjacent [City center]", 
-			//"+1 Food once Proffesional Sports is adopted"
-			]
-	},
-	{
 		"name": "Kurgan",
 		"uniqueTo": "Scythia",
 		"faith": 1,
-		"gold": 2, // 3, can not on hill
+		"gold": 1, // 3, can not on hill
 		"turnsToBuild": 7,
 		"techRequired": "Animal Husbandry",
 		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Tundra","Snow"],
-		"uniques": ["[+1 Faith] for each adjacent [Pasture]",
-			//"+1 Production once Capitalism is adopted"
-			]
-	},
-	{
-		"name": "Great Wall",
-		"uniqueTo": "China",
-		"overrideStats": true,
-		"gold": 2,
-		"turnsToBuild": 7,
-		"techRequired": "Masonry",
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill","Tundra","Snow"],
-		"uniques": ["Gives a defensive bonus of [25]%", "[+2 Culture, +2 Gold] for each adjacent [Great Wall]"]
+		"uniques": ["[+1 Faith] for each adjacent [Pasture]", "[+1 Faith] for each adjacent [Pasture] <after discovering [Stirrups]>"] //"+1 Production once Capitalism is adopted" should removed
 	},
 	{
 		"name": "Nubian Pyramid",
 		"uniqueTo": "Nubia",
-		"faith": 1,
-		"food": 1,
-		"science": 1,
-		"gold": 1,
-		"production": 1,
+		"faith": 1, //2
+		"food": 2,
 		"turnsToBuild": 8,
 		"techRequired": "Masonry",
-		"terrainsCanBeBuiltOn": ["Desert","Flood plains"] // adjacent district
+		"terrainsCanBeBuiltOn": ["Desert"] // adjacent district
+		"uniques": ["[+1 Food, +1 Production, +1 Science, +1 Culture] <with [1] to [6] neighboring [City center] tiles>", 
+			"[+1 Gold] <with [1] to [6] neighboring [City center] tiles> <with [1] to [5] neighboring [Coast] tiles>", 
+			"[+1 Faith] for each adjacent [Holy site]", ]
 	},
 	{
 		"name": "Kampung",
@@ -325,46 +267,77 @@
 			]
 	},
 	{
-		"name": "Ziggurat",
-		"uniqueTo": "Sumeria",
-		"science": 2,
+		"name": "Sphinx",
+		"uniqueTo": "Egypt",
+		"culture": 2,
+		"faith": 1,
 		"turnsToBuild": 7,
-		"terrainsCanBeBuiltOn": ["Grassland","Desert","Plains","Tundra"],
-		"uniques": ["[+1 Culture] <with [1] to [1] neighboring [River] tiles>",
-			//"+1 Culture once Natural History is adopted"
-			]
+		"techRequired": "Pottery",
+		"terrainsCanBeBuiltOn": ["Flood plains"],
+		"uniques": ["[+2 Faith] for each adjacent [City center]"]
+		//"uniques": ["+1 Culture once Natural History is adopted"]
 	},
 	{
-		"name": "Outback Station",
-		"uniqueTo": "Australia",
-		"food": 1,
-		"production": 1,
+		"name": "Pairidaeza",
+		"uniqueTo": "Persia",
+		"culture": 1,
+		"gold": 2,
 		"turnsToBuild": 7,
-		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert"],
-		"uniques": ["Only available <after adopting [Guilds]>", 
-			"[+1 Food] for each adjacent [Pasture]",
-			"[+1 Production] <with [2] to [3] neighboring [Outback Station] tiles>",
-			"[+1 Production] <with [4] to [6] neighboring [Outback Station] tiles>",
-			//"+1 Food once Rapid Deployment is adopted"
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Hill"],
+		"uniques": ["[+1 Culture, +1 Gold] for each adjacent [City center]", 
+			"Only available <after adopting [Early Empire]>"]
+	},
+	{ 
+		"name": "Rock-Hewn Church",
+		"uniqueTo": "Ethiopia",
+		"faith": 1,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Hill"],
+		"uniques": ["[+1 Faith] for each adjacent [Mountain]", "[+1 Faith] for each adjacent [Hill]",
+			"Only available <after adopting [Drama and Poetry]>", "[-1 Faith] for each adjacent [Rock-Hewn Church]",
+			//"[+1 Tourism] <after discovering [Flight]>"
 			]
 	},
-	{
-		"name": "Polder",
-		"uniqueTo": "The Netherlands",
-		"food": 1,
-		"production": 1,
-		"turnsToBuild": 7,
-		"techRequired": "Apprenticeship",
-		"terrainsCanBeBuiltOn": ["Coast"],
-		"uniques": ["[+1 Food] for each adjacent [Polder]",
-			//"[+1 Food, +1 Production] <after discovering [Replaceable Parts]>"
-			]
-	},	
 	
-	/*{ 
+	{
+		"name": "Chateau",
+		"uniqueTo": "France",
+		"culture": 2,
+		"gold": 1,
+		"turnsToBuild":7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Desert","Flood plains"],
+		"uniques": ["[+2 Gold] <with [1] to [6] neighboring [River] tiles>", 
+			//"[+2 Culture] <with [1] to [6] neighboring [City center] tiles> <after discovering [Flight]>", 
+			"Only available <after adopting [Humanism]>", 
+			"[-2 Culture, -2 Gold] for each adjacent [Chateau]"]
+	},
+	{
+		"name": "Golf Course",
+		"uniqueTo": "Scotland",
+		"gold": 2,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains","Hill","Tundra"],
+		"uniques": ["Only available <after adopting [Reformed Church]>", 
+			"Also grants +2 Amenities and +2 Culture", 
+			"limited to 1 per city"]
+	},
+	{
+		"name": "Hacienda",
+		"uniqueTo": "Gran Colombia",
+		"production": 1,
+		"gold": 2,
+		"turnsToBuild": 7,
+		"terrainsCanBeBuiltOn": ["Grassland","Plains"],
+		"uniques": ["Only available <after adopting [Mercantilism]>", 
+			"+1 Food for 2 adjacent Plantation, +1 Food for each adjacent Plantation after discovering Replaceable Parts",
+			"+1 Production for 2 adjacent Hacienda, +1 Production for each adjacent Hacienda after adopting Rapid Deployment"]
+	},
+	
+	
+	{ 
 		"name": "Ancient ruins", 
 		"uniques": ["Unpillagable", "Provides a random bonus when entered"]
-	},*/
+	},
 	{
 		"name": "City ruins", 
 		"uniques": ["Unpillagable"],
